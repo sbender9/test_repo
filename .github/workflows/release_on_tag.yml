@@ -18,7 +18,7 @@ jobs:
           ignorePreReleases: "true"
           mode: "COMMIT"
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/create-release@v1
@@ -28,4 +28,4 @@ jobs:
           prerelease: contains(github.ref, 'beta')
           body: ${{steps.github_release.outputs.changelog}}
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
