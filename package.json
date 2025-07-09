@@ -1,6 +1,6 @@
 {
   "name": "test_repo",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Create a GitHub Release Using Pull Requests",
   "main": "index.js",
   "author": "scott@scottbender.net",
